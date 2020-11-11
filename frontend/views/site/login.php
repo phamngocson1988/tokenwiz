@@ -5,32 +5,34 @@
 /* @var $model \common\models\LoginForm */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="page-ath-form">
   <h2 class="page-ath-heading">Sign in <small>with your TokenWiz Account</small></h2>
-  <form action="index.html">
-    <div class="input-item">
-      <input type="text" placeholder="Your Email" class="input-bordered">
-    </div>
-    <div class="input-item">
-      <input type="password" placeholder="Password" class="input-bordered">
-    </div>
+  <?php $form = ActiveForm::begin(['id' => 'singin-form']); ?>
+    <?= $form->field($model, 'username', [
+      'options' => ['class' => 'input-item'],
+      'inputOptions' => ['class' => 'input-bordered', 'autofocus' => true, 'placeholder' => 'User name']
+    ])->textInput()->label(false) ?>
+    <?= $form->field($model, 'password', [
+      'options' => ['class' => 'input-item'],
+      'inputOptions' => ['class' => 'input-bordered', 'placeholder' => 'Password']
+    ])->passwordInput()->label(false) ?>
     <div class="d-flex justify-content-between align-items-center">
-      <div class="input-item text-left">
-        <input class="input-checkbox input-checkbox-md" id="remember-me" type="checkbox">
-        <label for="remember-me">Remember Me</label>
-      </div>
+      <?=$form->field($model, 'rememberMe', [
+        'options' => ['class' => 'input-item text-left'],
+        'template' => '{input}{label}'
+      ])->checkbox(['class' => 'input-checkbox input-checkbox-md', 'id' => 'remember-me'], false)->label('Remember Me');?>
       <div>
-        <a href="forgot.html">Forgot password?</a>
+        <a href="<?=Url::to(['site/request-password-reset']);?>">Forgot password?</a>
         <div class="gaps-2x"></div>
       </div>
     </div>
     <button class="btn btn-primary btn-block">Sign In</button>
-  </form>
+  <?php ActiveForm::end(); ?>
   <div class="sap-text"><span>Or Sign In With</span></div>
   <ul class="row guttar-20px guttar-vr-20px">
     <li class="col"><a href="#" class="btn btn-outline btn-dark btn-facebook btn-block"><em class="fab fa-facebook-f"></em><span>Facebook</span></a></li>
@@ -39,6 +41,6 @@ $this->params['breadcrumbs'][] = $this->title;
   <div class="gaps-2x"></div>
   <div class="gaps-2x"></div>
   <div class="form-note">
-    Don’t have an account? <a href="sign-up.html"> <strong>Sign up here</strong></a>
+    Don’t have an account? <a href="<?=Url::to(['site/signup']);?>"> <strong>Sign up here</strong></a>
   </div>
 </div>

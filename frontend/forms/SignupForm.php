@@ -1,5 +1,5 @@
 <?php
-namespace frontend\models;
+namespace frontend\forms;
 
 use Yii;
 use yii\base\Model;
@@ -13,6 +13,7 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $repassword;
 
 
     /**
@@ -34,6 +35,10 @@ class SignupForm extends Model
 
             ['password', 'required'],
             ['password', 'string', 'min' => Yii::$app->params['user.passwordMinLength']],
+
+            ['repassword', 'required'],
+            ['repassword', 'string', 'min' => Yii::$app->params['user.passwordMinLength']],
+            ['repassword', 'compare', 'compareAttribute'=>'password', 'message'=>"Passwords don't match"],        
         ];
     }
 

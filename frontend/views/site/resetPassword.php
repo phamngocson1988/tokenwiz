@@ -5,27 +5,26 @@
 /* @var $model \frontend\models\ResetPasswordForm */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Reset password';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Change password';
 ?>
-<div class="site-reset-password">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>Please choose your new password:</p>
-
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'reset-password-form']); ?>
-
-                <?= $form->field($model, 'password')->passwordInput(['autofocus' => true]) ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Save', ['class' => 'btn btn-primary']) ?>
-                </div>
-
-            <?php ActiveForm::end(); ?>
-        </div>
+<div class="page-ath-form">
+  <h2 class="page-ath-heading">Change password <span>Type your new password input textbox below.</span></h2>
+  <?php $form = ActiveForm::begin(['id' => 'change-password-form']); ?>
+    <?= $form->field($model, 'password', [
+      'options' => ['class' => 'input-item'],
+      'inputOptions' => ['class' => 'input-bordered', 'autofocus' => true, 'placeholder' => 'Type your new password']
+    ])->passwordInput()->label(false) ?>
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <button class="btn btn-primary btn-block">Change password</button>
+      </div>
+      <div>
+        <a href="<?=Url::to(['site/login']);?>">Return to login</a>
+      </div>
     </div>
+    <div class="gaps-2x"></div>
+  <?php ActiveForm::end(); ?>
 </div>

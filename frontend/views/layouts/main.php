@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -47,12 +48,15 @@ AppAsset::register($this);
             <!-- .topbar-nav-item -->
           </ul>
           <!-- .topbar-nav -->
-          <a class="topbar-logo" href="./">
-          <img src="/images/logo-light2x.png" srcset="/images/logo-light2x.png 2x" alt="logo">
+          
+          <a class="topbar-logo" href="/">
+            <img src="/images/logo-light2x.png" srcset="/images/logo-light2x.png 2x" alt="logo">
           </a>
+          <?php if (!Yii::$app->user->isGuest) : ?>
+          <?php $loginUser = Yii::$app->user->identity;?>
           <ul class="topbar-nav">
             <li class="topbar-nav-item relative">
-              <span class="user-welcome d-none d-lg-inline-block">Welcome! Stefan Harary</span>
+              <span class="user-welcome d-none d-lg-inline-block">Welcome! <?=$loginUser->username;?></span>
               <a class="toggle-tigger user-thumb" href="#"><em class="ti ti-user"></em></a>
               <div class="toggle-class dropdown-content dropdown-content-right dropdown-arrow-right user-dropdown">
                 <div class="user-status">
@@ -65,12 +69,19 @@ AppAsset::register($this);
                   <li><a href="activity.html"><i class="ti ti-eye"></i>Activity</a></li>
                 </ul>
                 <ul class="user-links bg-light">
-                  <li><a href="sign-in.html"><i class="ti ti-power-off"></i>Logout</a></li>
+                  <li><a href="<?=Url::to(['site/logout']);?>"><i class="ti ti-power-off"></i>Logout</a></li>
                 </ul>
               </div>
             </li>
             <!-- .topbar-nav-item -->
           </ul>
+          <?php else : ?>
+          <ul class="topbar-nav">
+            <li class="topbar-nav-item relative">
+              <a href="<?=Url::to(['site/login']);?>"><span class="user-welcome d-none d-lg-inline-block">Login</span></a>
+            </li>
+          </ul>
+          <?php endif;?>
           <!-- .topbar-nav -->
         </div>
       </div>

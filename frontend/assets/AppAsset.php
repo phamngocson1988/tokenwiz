@@ -13,7 +13,8 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'vendor/assets/css/vendor.bundle.css?ver=104',
-        'vendor/assets/css/style.css'
+        'vendor/assets/css/style.css',
+        'vendor/theme.css'
     ];
     public $js = [
         'vendor/assets/js/jquery.bundle.js?ver=104',

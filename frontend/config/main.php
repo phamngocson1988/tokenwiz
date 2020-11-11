@@ -66,13 +66,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
+        'urlManager' => require('router.php'),
     ],
     'params' => $params,
 ];
