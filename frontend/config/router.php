@@ -18,6 +18,8 @@ return [
         'forgot' => 'site/request-password-reset',
         'reset-password' => 'site/reset-password',
 
+        'profile' => 'profile/index',
+
         '<controller>/<action>' => '<controller>/<action>',
     ],
 ];
