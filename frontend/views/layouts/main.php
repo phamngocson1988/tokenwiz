@@ -93,9 +93,9 @@ AppAsset::register($this);
         <div class="navbar-innr">
           <ul class="navbar-menu">
             <li><a href="index.html"><em class="ikon ikon-dashboard"></em> Dashboard</a></li>
-            <li><a href="buy-token.html"><em class="ikon ikon-coins"></em> Buy Tokens</a></li>
-            <li><a href="ico-distribution.html"><em class="ikon ikon-distribution"></em> ICO Distribution</a></li>
-            <li><a href="transactions.html"><em class="ikon ikon-transactions"></em> Transactions</a></li>
+            <li><a href="<?=Url::to(['cart/index']);?>"><em class="ikon ikon-coins"></em> Buy Tokens</a></li>
+            <li><a href="<?=Url::to(['order/index']);?>"><em class="ikon ikon-distribution"></em> ICO Distribution</a></li>
+            <li><a href="<?=Url::to(['transaction/index']);?>"><em class="ikon ikon-transactions"></em> Transactions</a></li>
             <li><a href="profile.html"><em class="ikon ikon-user"></em> Profile</a></li>
             <li class="has-dropdown page-links-all">
               <a class="drop-toggle" href="#"><em class="ikon ikon-exchange"></em> Pages</a>

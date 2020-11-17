@@ -20,6 +20,12 @@ return [
 
         'profile' => 'profile/index',
 
+        'plan' => 'order/index',
+
+        'transaction' => 'transaction/index',
+
+        'buy' => 'cart/index',
+
         '<controller>/<action>' => '<controller>/<action>',
     ],
 ];
