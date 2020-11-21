@@ -1,5 +1,6 @@
 <?php 
 use yii\helpers\Url;
+use common\components\helpers\CommonHelper;
 ?>
 <div class="page-content">
   <div class="container">
@@ -48,7 +49,7 @@ use yii\helpers\Url;
                 </ul>
               </td>
               <td class="data-col dt-login">
-                <span class="sub sub-s2 sub-time"><?=date('Y-m-d', $user->created_at);?></span>
+                <span class="sub sub-s2 sub-time"><?=CommonHelper::dateFormat($user->created_at);?></span>
               </td>
               <td class="data-col dt-status">
                 <?php if ($user->isActive()) : ?>

@@ -1,5 +1,6 @@
 <?php 
 use yii\helpers\Url;
+use common\components\helpers\CommonHelper;
 ?>
 <div class="page-content">
   <div class="container">
@@ -42,13 +43,13 @@ use yii\helpers\Url;
                   <?php endif;?>
                   <div class="fake-class">
                     <span class="lead tnx-id"><?=sprintf("#%s", $order->id);?></span>
-                    <span class="sub sub-date"><?=$order->created_at;?></span>
+                    <span class="sub sub-date"><?=CommonHelper::dateFormat($order->created_at);?></span>
                   </div>
                 </div>
               </td>
               <td class="data-col dt-account">
                 <span class="lead user-info"><?=$order->product->name;?></span>
-                <span class="sub sub-date"><?=$order->isSuccess() ? $order->started_at : 'Waiting';?></span>
+                <span class="sub sub-date"><?=$order->isRunning() ? CommonHelper::dateFormat($order->started_at) : 'Waiting';?></span>
               </td>
               <td class="data-col dt-token">
                 <span class="lead token-amount"><?=number_format($order->quantity);?></span>

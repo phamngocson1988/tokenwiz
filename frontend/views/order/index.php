@@ -33,7 +33,7 @@ use common\components\helpers\CommonHelper;
                       <span class="badge badge-danger ucap badge-xs">Stop</span>
                       <?php endif;?>
                     </h5>
-                    <span>Start at: <?=$order->isTemporary() ? '~' : CommonHelper::dateFormat($order->started_at);?></span>
+                    <span>Start at: <?=$order->isRunning() ? CommonHelper::dateFormat($order->started_at) : '~';?></span>
                     <span>Created at: <?=CommonHelper::dateFormat($order->created_at);?></span>
                   </div>
                 </div>
