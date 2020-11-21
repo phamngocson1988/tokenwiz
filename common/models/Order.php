@@ -12,8 +12,9 @@ use yii\behaviors\BlameableBehavior;
 class Order extends ActiveRecord
 {
     const STATUS_TEMPORARY = 1;
-    const STATUS_RUNNING = 2;
-    const STATUS_STOP = 3;
+    const STATUS_SUCCESS = 2;
+    const STATUS_RUNNING = 3;
+    const STATUS_STOP = 4;
     
 	public static function tableName()
     {
@@ -45,6 +46,11 @@ class Order extends ActiveRecord
     public function isTemporary()
     {
         return $this->status === self::STATUS_TEMPORARY;
+    }
+
+    public function isSuccess() 
+    {
+        return $this->status === self::STATUS_SUCCESS;
     }
 
     public function isRunning() 
