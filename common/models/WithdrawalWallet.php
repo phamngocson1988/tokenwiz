@@ -7,13 +7,13 @@ use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;
 
 /**
- * Wallet model
+ * WithdrawalWallet model
  */
-class Wallet extends ActiveRecord
+class WithdrawalWallet extends ActiveRecord
 {
     public static function tableName()
     {
-        return '{{%wallet}}';
+        return '{{%withdrawal_request}}';
     }
 
     public function behaviors()
@@ -22,13 +22,13 @@ class Wallet extends ActiveRecord
             [
                 'class' => TimestampBehavior::className(),
                 'createdAtAttribute' => 'created_at',
-                'updatedAtAttribute' => 'updated_at',
+                'updatedAtAttribute' => false,
                 'value' => date('Y-m-d H:i:s')
             ],
             [
                 'class' => BlameableBehavior::className(),
                 'createdByAttribute' => 'created_by',
-                'updatedByAttribute' => 'updated_by',
+                'updatedByAttribute' => false,
             ],
         ];
     }

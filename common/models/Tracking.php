@@ -7,13 +7,13 @@ use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;
 
 /**
- * Wallet model
+ * Tracking model
  */
-class Wallet extends ActiveRecord
+class Tracking extends ActiveRecord
 {
-    public static function tableName()
+	public static function tableName()
     {
-        return '{{%wallet}}';
+        return '{{%tracking}}';
     }
 
     public function behaviors()

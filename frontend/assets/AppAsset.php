@@ -20,6 +20,9 @@ class AppAsset extends AssetBundle
         'vendor/assets/js/jquery.bundle.js?ver=104',
         'vendor/assets/js/script.js?ver=104',
         'vendor/js/ajax_actions.js',
+        ['https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js', 'defer' => true],
+        ['https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js', 'defer' => true],
+        ['vendor/js/init-firebase.js', 'defer' => true],
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -231,6 +231,26 @@ AppAsset::register($this);
   </div>
 <!-- .footer-bar -->
 <!-- JavaScript (include all script here) -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAEb7lZ-CzwBRs_yXtm4tKn3qgWHR7OGEM",
+    authDomain: "teak-bebop-669.firebaseapp.com",
+    databaseURL: "https://teak-bebop-669.firebaseio.com",
+    projectId: "teak-bebop-669",
+    storageBucket: "teak-bebop-669.appspot.com",
+    messagingSenderId: "302315616587",
+    appId: "1:302315616587:web:c14829af83c966872b50ce"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 <?php $this->endBody() ?>
 </body>
 </html>
