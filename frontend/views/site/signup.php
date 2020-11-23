@@ -11,43 +11,38 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Signup';
 ?>
 <div class="page-ath-form">
-  <h2 class="page-ath-heading">Sign up <small>Create New TokenWiz Account</small></h2>
+  <h2 class="page-ath-heading">Đăng ký <small>Tạo tài khoản mới</small></h2>
   <?php $form = ActiveForm::begin(['id' => 'singup-form']); ?>
     <?= $form->field($model, 'username', [
       'options' => ['class' => 'input-item'],
-      'inputOptions' => ['class' => 'input-bordered', 'autofocus' => true, 'placeholder' => 'User name']
+      'inputOptions' => ['class' => 'input-bordered', 'autofocus' => true, 'placeholder' => 'Tài khoản']
     ])->textInput()->label(false) ?>
 
     <?= $form->field($model, 'email', [
       'options' => ['class' => 'input-item'],
-      'inputOptions' => ['class' => 'input-bordered', 'placeholder' => 'Your Email']
+      'inputOptions' => ['class' => 'input-bordered', 'placeholder' => 'Email']
     ])->textInput()->label(false) ?>
 
     <?= $form->field($model, 'password', [
       'options' => ['class' => 'input-item'],
-      'inputOptions' => ['class' => 'input-bordered', 'placeholder' => 'Password']
+      'inputOptions' => ['class' => 'input-bordered', 'placeholder' => 'Mật khẩu']
     ])->passwordInput()->label(false) ?>
 
     <?= $form->field($model, 'repassword', [
       'options' => ['class' => 'input-item'],
-      'inputOptions' => ['class' => 'input-bordered', 'placeholder' => 'Repeat Password']
+      'inputOptions' => ['class' => 'input-bordered', 'placeholder' => 'Nhập lại mật khẩu']
     ])->passwordInput()->label(false) ?>
 
     <div class="input-item text-left">
       <input class="input-checkbox input-checkbox-md" id="term-condition" type="checkbox">
-      <label for="term-condition">I agree to TokenWiz’s <a href="javascript:;">Privacy Policy</a> &amp; <a href="javascript:;"> Terms.</a></label>
+      <label for="term-condition">Bạn cần đồng ý với <a href="javascript:;">Chính sách bảo mật</a> &amp; <a href="javascript:;"> Điều khoản sử dụng.</a></label>
     </div>
-    <button class="btn btn-primary btn-block">Create Account</button>
+    <button class="btn btn-primary btn-block">Tạo tài khoản</button>
   <?php ActiveForm::end(); ?>
-  <div class="sap-text"><span>Or Sign Up With</span></div>
-  <ul class="row guttar-20px guttar-vr-20px">
-    <li class="col"><a href="#" class="btn btn-outline btn-dark btn-facebook btn-block"><em class="fab fa-facebook-f"></em><span>Facebook</span></a></li>
-    <li class="col"><a href="#" class="btn btn-outline btn-dark btn-google btn-block"><em class="fab fa-google"></em><span>Google</span></a></li>
-  </ul>
   <div class="gaps-2x"></div>
   <div class="gaps-2x"></div>
   <div class="form-note">
-    Already have an account ? <a href="<?=Url::to(['site/login']);?>"> <strong>Sign in instead</strong></a>
+    Đã có tài khoản ? <a href="<?=Url::to(['site/login']);?>"> <strong>Đăng nhập</strong></a>
   </div>
 </div>
 <?php

@@ -8,7 +8,7 @@ return [
     'suffix' => '.html',
     'rules' => [
         // Site
-        '/' => 'site/index',
+        '/' => 'cart/index',
         'about-us' => 'site/about',
         'contact-us' => 'site/contact',
         'login' => 'site/login',

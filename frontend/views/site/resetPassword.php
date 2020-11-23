@@ -8,21 +8,21 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Change password';
+$this->title = 'Thay đổi mật khẩu';
 ?>
 <div class="page-ath-form">
-  <h2 class="page-ath-heading">Change password <span>Type your new password input textbox below.</span></h2>
+  <h2 class="page-ath-heading">Đổi mật khẩu <span>Nhập mật khẩu mới vào ô bên dưới.</span></h2>
   <?php $form = ActiveForm::begin(['id' => 'change-password-form']); ?>
     <?= $form->field($model, 'password', [
       'options' => ['class' => 'input-item'],
-      'inputOptions' => ['class' => 'input-bordered', 'autofocus' => true, 'placeholder' => 'Type your new password']
+      'inputOptions' => ['class' => 'input-bordered', 'autofocus' => true, 'placeholder' => 'Nhập mật khẩu mới']
     ])->passwordInput()->label(false) ?>
     <div class="d-flex justify-content-between align-items-center">
       <div>
-        <button class="btn btn-primary btn-block">Change password</button>
+        <button class="btn btn-primary btn-block">Đổi mật khẩu</button>
       </div>
       <div>
-        <a href="<?=Url::to(['site/login']);?>">Return to login</a>
+        <a href="<?=Url::to(['site/login']);?>">Về trang đăng nhập</a>
       </div>
     </div>
     <div class="gaps-2x"></div>

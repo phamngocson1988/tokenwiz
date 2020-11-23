@@ -95,66 +95,28 @@ use yii\helpers\Url;
           <!-- .card-innr -->
         </div>
         <!-- .card -->
-        <div class="content-area card">
-          <div class="card-innr">
-            <div class="card-head">
-              <h4 class="card-title">Two-Factor Verification</h4>
-            </div>
-            <p>Two-factor authentication is a method for protection your web account. When it is activated you need to enter not only your password, but also a special code. You can receive this code by in mobile app. Even if third person will find your password, then can't access with that code.</p>
-            <div class="d-sm-flex justify-content-between align-items-center pdt-1-5x">
-              <span class="text-light ucap d-inline-flex align-items-center">
-              <span class="mb-0"><small>Current Status:</small></span> 
-              <span class="badge badge-disabled ml-2">Disabled</span>
-              </span>
-              <div class="gaps-2x d-sm-none"></div>
-              <button class="order-sm-first btn btn-primary">Enable 2FA</button>
-            </div>
-          </div>
-          <!-- .card-innr -->
-        </div>
-        <!-- .card -->
       </div>
-      <!-- .col -->
       <div class="aside sidebar-right col-lg-4">
-        <div class="account-info card">
+        <div class="token-statistics card card-token height-auto">
           <div class="card-innr">
-            <h6 class="card-title card-title-sm">Your Account Status</h6>
-            <ul class="btn-grp">
-              <li><a href="#" class="btn btn-auto btn-xs btn-success">Email Verified</a></li>
-              <li><a href="#" class="btn btn-auto btn-xs btn-warning">KYC Pending</a></li>
-            </ul>
-            <div class="gaps-2-5x"></div>
-            <h6 class="card-title card-title-sm">Receiving Wallet</h6>
-            <div class="d-flex justify-content-between">
-              <span><span>0x39deb3.....e2ac64rd</span> <em class="fas fa-info-circle text-exlight" data-toggle="tooltip" data-placement="bottom" title="1 ETH = 100 TWZ"></em></span>
-              <a href="#" data-toggle="modal" data-target="#edit-wallet" class="link link-ucap">Edit</a>
+            <div class="token-balance">
+              <div class="token-balance-text">
+                <h6 class="card-sub-title">Tổng đầu tư</h6>
+                <span class="lead"><?= Yii::$app->user->isGuest ? 0 : number_format(Yii::$app->user->identity->totalOrderValue());?> <span>VNĐ</span></span>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="referral-info card">
-          <div class="card-innr">
-            <h6 class="card-title card-title-sm">Earn with Referral</h6>
-            <p class=" pdb-0-5x">Invite your friends &amp; family and receive a <strong><span class="text-primary">bonus - 15%</span> of the value of contribution.</strong></p>
-            <div class="copy-wrap mgb-0-5x">
-              <span class="copy-feedback"></span>
-              <em class="fas fa-link"></em>
-              <input type="text" class="copy-address" value="https://demo.themenio.com/ico?ref=7d264f90653733592" disabled>
-              <button class="copy-trigger copy-clipboard" data-clipboard-text="https://demo.themenio.com/ico?ref=7d264f90653733592"><em class="ti ti-files"></em></button>
+            <div class="token-balance token-balance-s2">
+              <h6 class="card-sub-title">Tổng lợi nhuận</h6>
+              <ul class="token-balance-list">
+                <li class="token-balance-sub">
+                  <span class="lead">2.646</span>
+                  <span class="sub">VNĐ</span>
+                </li>
+              </ul>
             </div>
-            <!-- .copy-wrap -->
-          </div>
-        </div>
-        <div class="kyc-info card">
-          <div class="card-innr">
-            <h6 class="card-title card-title-sm">Identity Verification - KYC</h6>
-            <p>To comply with regulation, participant will have to go through indentity verification.</p>
-            <p class="lead text-light pdb-0-5x">You have not submitted your KYC application to verify your indentity.</p>
-            <a href="#" class="btn btn-primary btn-block">Click to Proceed</a>
-            <h6 class="kyc-alert text-danger">* KYC verification required for purchase token</h6>
           </div>
         </div>
       </div>
-      <!-- .col -->
     </div>
     <!-- .container -->
   </div>

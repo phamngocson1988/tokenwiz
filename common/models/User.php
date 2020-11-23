@@ -44,6 +44,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             TimestampBehavior::className(),
+            'user_order' => \common\behaviors\UserOrderBehavior::className(),
         ];
     }
 
