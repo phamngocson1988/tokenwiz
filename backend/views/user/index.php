@@ -34,7 +34,7 @@ use common\components\helpers\CommonHelper;
                 <span class="sub sub-s2 sub-email"><?=$user->email;?></span>
               </td>
               <td class="data-col dt-token">
-                <span class="lead lead-btoken">35,040</span>
+                <span class="lead lead-btoken"><?=number_format($user->totalOrderValue());?></span>
               </td>
               <td class="data-col dt-verify">
                 <ul class="data-vr-list">
@@ -53,11 +53,11 @@ use common\components\helpers\CommonHelper;
               </td>
               <td class="data-col dt-status">
                 <?php if ($user->isActive()) : ?>
-                <span class="dt-status-md badge badge-outline badge-success badge-md">Active</span>
-                <span class="dt-status-sm badge badge-sq badge-outline badge-success badge-md">A</span>
+                <span class="dt-status-md badge badge-outline badge-success badge-md">Enabled</span>
+                <span class="dt-status-sm badge badge-sq badge-outline badge-success badge-md">E</span>
                 <?php else : ?>
-                <span class="dt-status-md badge badge-outline badge-danger badge-md">Suspended</span>
-                <span class="dt-status-sm badge badge-sq badge-outline badge-danger badge-md">s</span>
+                <span class="dt-status-md badge badge-outline badge-danger badge-md">Disabled</span>
+                <span class="dt-status-sm badge badge-sq badge-outline badge-danger badge-md">D</span>
                 <?php endif;?>
               </td>
               <td class="data-col text-right">
@@ -65,9 +65,11 @@ use common\components\helpers\CommonHelper;
                   <a href="#" class="btn btn-light-alt btn-xs btn-icon toggle-tigger"><em class="ti ti-more-alt"></em></a>
                   <div class="toggle-class dropdown-content dropdown-content-top-left">
                     <ul class="dropdown-list">
-                      <!-- <li><a href="#"><em class="ti ti-eye"></em> View Details</a></li> -->
-                      <li><a href="<?=Url::to(['user/inactive', 'id' => $user->id]);?>"><em class="ti ti-na"></em> Suspend</a></li>
-                      <li><a href="<?=Url::to(['user/delete', 'id' => $user->id]);?>"><em class="ti ti-trash"></em> Delete</a></li>
+                      <?php if ($user->isActive()) : ?>
+                      <li><a href="<?=Url::to(['user/inactive', 'id' => $user->id]);?>"><em class="ti ti-na"></em> Disable</a></li>
+                      <?php elseif ($user->isInactive()) : ?>
+                      <li><a href="<?=Url::to(['user/active', 'id' => $user->id]);?>"><em class="ti ti-eye"></em> Enable</a></li>
+                      <?php endif;?>
                     </ul>
                   </div>
                 </div>
