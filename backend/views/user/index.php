@@ -7,19 +7,16 @@ use common\components\helpers\CommonHelper;
     <div class="card content-area">
       <div class="card-innr">
         <div class="card-head">
-          <h4 class="card-title">User List</h4>
+          <h4 class="card-title">Quản lý khách hàng</h4>
         </div>
         <table class="data-table dt-init user-list">
           <thead>
             <tr class="data-item data-head">
-              <th class="data-col dt-user">User</th>
+              <th class="data-col dt-user">Khách hàng</th>
               <th class="data-col dt-email">Email</th>
-              <th class="data-col dt-token">Tokens</th>
-              <th class="data-col dt-verify">Verified Status</th>
-              <th class="data-col dt-login">Created Date</th>
-              <th class="data-col dt-status">
-                <div class="dt-status-text">Status</div>
-              </th>
+              <th class="data-col dt-token">Số tiền đầu tư</th>
+              <th class="data-col dt-verify">Trạng thái</th>
+              <th class="data-col dt-login">Ngày tham gia</th>
               <th class="data-col"></th>
             </tr>
           </thead>
@@ -40,25 +37,15 @@ use common\components\helpers\CommonHelper;
                 <ul class="data-vr-list">
                   <li>
                     <?php if ($user->isActive()) : ?>
-                    <div class="data-state data-state-sm data-state-approved"></div>
+                    <div class="data-state data-state-sm data-state-approved"></div> Active
                     <?php else : ?>
-                    <div class="data-state data-state-sm data-state-pending"></div>
+                    <div class="data-state data-state-sm data-state-pending"></div> Waiting
                     <?php endif;?>
-                    Email
                   </li>
                 </ul>
               </td>
               <td class="data-col dt-login">
-                <span class="sub sub-s2 sub-time"><?=CommonHelper::dateFormat($user->created_at);?></span>
-              </td>
-              <td class="data-col dt-status">
-                <?php if ($user->isActive()) : ?>
-                <span class="dt-status-md badge badge-outline badge-success badge-md">Enabled</span>
-                <span class="dt-status-sm badge badge-sq badge-outline badge-success badge-md">E</span>
-                <?php else : ?>
-                <span class="dt-status-md badge badge-outline badge-danger badge-md">Disabled</span>
-                <span class="dt-status-sm badge badge-sq badge-outline badge-danger badge-md">D</span>
-                <?php endif;?>
+                <span class="sub sub-s2 sub-time"><?=CommonHelper::dateFormat(date('Y-m-d', $user->created_at));?></span>
               </td>
               <td class="data-col text-right">
                 <div class="relative d-inline-block">

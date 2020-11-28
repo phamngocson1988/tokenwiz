@@ -22,7 +22,7 @@ return [
 
         'plan' => 'order/index',
 
-        'transaction' => 'transaction/index',
+        'wallet' => 'wallet/index',
 
         'buy' => 'cart/index',
 

@@ -7,18 +7,18 @@ use common\components\helpers\CommonHelper;
     <div class="content-area card">
       <div class="card-innr">
         <div class="card-head">
-          <h4 class="card-title">Admin Transactions</h4>
+          <h4 class="card-title">Quản lý đầu tư</h4>
         </div>
         <table class="data-table dt-filter-init admin-tnx">
           <thead>
             <tr class="data-item data-head">
-              <th class="data-col dt-tnxno">Order NO</th>
-              <th class="data-col dt-account">Package</th>
-              <th class="data-col dt-token">Quantity</th>
-              <th class="data-col dt-amount">Price</th>
-              <th class="data-col dt-usd-amount">Total Price</th>
+              <th class="data-col dt-tnxno">Mã đầu tư</th>
+              <th class="data-col dt-account">Tên gói đầu tư</th>
+              <th class="data-col dt-token">Số lượng</th>
+              <th class="data-col dt-amount">Giá tiền</th>
+              <th class="data-col dt-usd-amount">Thành tiền</th>
               <th class="data-col dt-type">
-                <div class="dt-type-text">Type</div>
+                <div class="dt-type-text">Trạng thái</div>
               </th>
               <th class="data-col"></th>
             </tr>
@@ -57,11 +57,11 @@ use common\components\helpers\CommonHelper;
               </td>
               <td class="data-col dt-amount">
                 <span class="lead amount-pay"><?=number_format($order->price);?></span>
-                <span class="sub sub-symbol"><?=$order->currency;?> <em class="fas fa-info-circle"></em></span>
+                <span class="sub sub-symbol"><?=$order->currency;?></span>
               </td>
               <td class="data-col dt-usd-amount">
                 <span class="lead amount-pay"><?=number_format($order->total_price);?></span>
-                <span class="sub sub-symbol"><?=$order->currency;?> <em class="fas fa-info-circle"></em></span>
+                <span class="sub sub-symbol"><?=$order->currency;?></span>
               </td>
               <td class="data-col dt-type">
                 <?php if ($order->isTemporary()):?>
