@@ -22,6 +22,11 @@ $this->title = 'Signup';
       'options' => ['class' => 'input-item'],
       'inputOptions' => ['class' => 'input-bordered', 'placeholder' => 'Email']
     ])->textInput()->label(false) ?>
+    
+    <?= $form->field($model, 'phone', [
+      'options' => ['class' => 'input-item'],
+      'inputOptions' => ['class' => 'input-bordered', 'placeholder' => 'Số điện thoại']
+    ])->textInput()->label(false) ?>
 
     <?= $form->field($model, 'password', [
       'options' => ['class' => 'input-item'],
