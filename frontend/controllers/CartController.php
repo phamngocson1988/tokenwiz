@@ -19,10 +19,8 @@ class CartController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['purchase'],
                 'rules' => [
                     [
-                        'actions' => ['purchase'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],

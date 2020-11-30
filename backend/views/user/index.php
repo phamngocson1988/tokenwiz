@@ -14,6 +14,7 @@ use common\components\helpers\CommonHelper;
             <tr class="data-item data-head">
               <th class="data-col dt-user">Khách hàng</th>
               <th class="data-col dt-email">Email</th>
+              <th class="data-col dt-phone">Số điện thoại</th>
               <th class="data-col dt-token">Số tiền đầu tư</th>
               <th class="data-col dt-verify">Trạng thái</th>
               <th class="data-col dt-login">Ngày tham gia</th>
@@ -29,6 +30,9 @@ use common\components\helpers\CommonHelper;
               </td>
               <td class="data-col dt-email">
                 <span class="sub sub-s2 sub-email"><?=$user->email;?></span>
+              </td>
+              <td class="data-col dt-phone">
+                <span class="sub sub-s2 sub-phone"><?=$user->phone;?></span>
               </td>
               <td class="data-col dt-token">
                 <span class="lead lead-btoken"><?=number_format($user->totalOrderValue());?></span>
