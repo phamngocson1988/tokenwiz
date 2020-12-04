@@ -21,7 +21,7 @@ class m201121_152657_wallet extends Migration
             'user_id' => $this->integer()->notNull(),
             'amount' => $this->integer()->notNull()->defaultValue(0),
             'currency' => $this->string(16)->notNull()->defaultValue('VND'),
-            'ref_obj' => $this->string(16), 
+            'ref_obj' => $this->string(128), 
             'ref_key' => $this->string(16), 
             'description' => $this->string(512), 
             'created_by' => $this->integer(),

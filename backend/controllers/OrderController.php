@@ -71,4 +71,15 @@ class OrderController extends Controller
         }
         return $this->redirect(Yii::$app->request->referrer);
     }
+
+    public function actionManualStart()
+    {
+        $form = new \backend\forms\ManualStartOrderForm();
+        if ($form->start()) {
+            die('Manual start successfully');
+        } else {
+            print_r($form);
+            die('There is something wrong');
+        }
+    }
 }

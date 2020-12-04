@@ -35,4 +35,15 @@ class WalletController extends Controller
             'wallets' => $wallets,
         ]);
     }
+
+    public function actionManualRun()
+    {
+        $form = new \backend\forms\ManualRunBenefitForm();
+        if ($count = $form->run()) {
+            die('Manual start successfully: ' . $count);
+        } else {
+            print_r($form);
+            die('There is something wrong');
+        }
+    }
 }

@@ -26,6 +26,7 @@ class m201114_075930_order extends Migration
             'status' => $this->smallInteger()->notNull()->defaultValue(1),
             'confirmed_at' => $this->dateTime(),
             'started_at' => $this->dateTime(),
+            'last_benefit_at' => $this->dateTime(),
             'stopped_at' => $this->dateTime(),
             'created_at' => $this->dateTime()->notNull(),
             'created_by' => $this->integer(),
