@@ -14,7 +14,7 @@ return [
     'components' => [
         'view' => [
             // 'class' => 'frontend\components\web\View',
-            'title' => 'TokenWiz - ICO User Dashboard Admin Template',
+            'title' => 'Đầu tư - Buôn Làng',
             // 'on afterRender' => function($event) {
             //     $view = $event->sender;
             //     $view->registerMetaTag(['property' => 'og:type', 'content' => 'website'], 'og:type');

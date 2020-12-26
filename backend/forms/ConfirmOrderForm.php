@@ -4,6 +4,7 @@ namespace backend\forms;
 
 use Yii;
 use common\models\Order;
+use common\models\User;
 
 class ConfirmOrderForm extends ActionForm
 {
@@ -41,8 +42,29 @@ class ConfirmOrderForm extends ActionForm
     {
     	if (!$this->validate()) return false;
     	$order = $this->getOrder();
+        $firstTimeConfirm = !$order->confirmed_at;
         $order->touch('confirmed_at');
     	$order->status = Order::STATUS_SUCCESS;
-    	return $order->save();
+        if ($firstTimeConfirm) {
+            return $order->save() && $this->sendEmail($order);
+        }
+        return $order->save();
+    }
+
+    protected function sendEmail($order)
+    {
+        $user = User::findOne($order->user_id);
+        if (!$user) return true;
+
+        return Yii::$app
+            ->mailer
+            ->compose(
+                ['html' => 'confirm_order'],
+                ['user' => $user, 'order' => $order]
+            )
+            ->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name . ' robot'])
+            ->setTo($user->email)
+            ->setSubject(sprintf('Kích hoạt gói đầu tư số %s đã được xác nhận', $order->id))
+            ->send();
     }
 }

@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use backend\assets\AppAsset;
+use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 AppAsset::register($this);
@@ -21,7 +21,7 @@ AppAsset::register($this);
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Fully featured and complete ICO Dashboard template for ICO backend management.">
   <!-- Fav Icon  -->
-  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="shortcut icon" href="https://invest.buonlang.com/images/favicon.png">
   <?php $this->registerCsrfMetaTags() ?>
   <!-- Site Title  -->
   <title><?= Html::encode($this->title) ?></title>
@@ -34,33 +34,32 @@ AppAsset::register($this);
       <div class="row justify-content-center">
         <div class="col-xl-9 col-lg-10">
           <div class="content-area card">
-          	<div class="card-innr">
-          		<table class="email-wraper">
-							  <tbody>
-							    <tr>
-							      <td class="pdt-4x pdb-4x">
-          						<?=$content;?>
-	          					<table class="email-footer">
-							          <tbody>
-							            <tr>
-							              <td class="text-center pdt-2-5x pdl-2x pdr-2x">
-							                <p class="email-copyright-text">Copyright © 2018 Tokenwiz. <br> Template Made By <a href="https://themeforest.net/user/softnio/portfolio">Softnio</a> &amp; Handcrafted by iO.</p>
-							                <ul class="email-social">
-							                  <li><a href="#"><img src="images/brand-b.png" alt="brand"></a></li>
-							                  <li><a href="#"><img src="images/brand-e.png" alt="brand"></a></li>
-							                  <li><a href="#"><img src="images/brand-d.png" alt="brand"></a></li>
-							                  <li><a href="#"><img src="images/brand-a.png" alt="brand"></a></li>
-							                  <li><a href="#"><img src="images/brand-c.png" alt="brand"></a></li>
-							                </ul>
-							              </td>
-							            </tr>
-							          </tbody>
-							        </table>
-							      </td>
-							    </tr>
-							  </tbody>
-							</table>
-          	</div>
+            <div class="card-innr">
+              <table class="email-wraper">
+                <tbody>
+                  <tr>
+                    <td class="pdt-4x pdb-4x">
+                      <?=$content;?>
+                      <table class="email-footer">
+                        <tbody>
+                          <tr>
+                            <td class="text-center pdt-2-5x pdl-2x pdr-2x">
+                              <ul class="email-social">
+                                <li><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-b.png" alt="brand"></a></li>
+                                <li><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-e.png" alt="brand"></a></li>
+                                <li><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-d.png" alt="brand"></a></li>
+                                <li><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-a.png" alt="brand"></a></li>
+                                <li><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-c.png" alt="brand"></a></li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <!-- .card-innr -->
           </div>
           <!-- .card -->

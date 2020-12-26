@@ -4,7 +4,7 @@ return [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'name' => 'Tokenwiz',
+    'name' => 'Đầu tư - Buôn Làng',
     'timeZone' => 'Asia/Bangkok',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
