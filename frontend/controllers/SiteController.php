@@ -262,4 +262,18 @@ class SiteController extends Controller
             'model' => $model
         ]);
     }
+
+    public function actionTest($email)
+    {
+        if (!$email) echo 'Empty email';
+        echo $email;
+        Yii::$app
+            ->mailer
+            ->compose(['html' => 'test'])
+            ->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name . ' robot'])
+            ->setTo($email)
+            ->setSubject('Mail test')
+            ->send();
+        die;
+    }
 }
