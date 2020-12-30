@@ -22,13 +22,6 @@ use common\widgets\Alert;
   <meta name="description" content="Fully featured and complete ICO Dashboard template for ICO backend management.">
   <!-- Fav Icon  -->
   <link rel="shortcut icon" href="https://invest.buonlang.com/images/favicon.png">
-  <link rel="stylesheet" href="https://invest.buonlang.com/vendor/assets/css/vendor.bundle.css?ver=104">
-  <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="https://invest.buonlang.com/vendor/assets/css/style.css?ver=104">
-  <link rel="stylesheet" href="https://invest.buonlang.com/vendor/assets/css/style-email.css?ver=104">
-
-  <script src="https://invest.buonlang.com/vendor/assets/js/jquery.bundle.js?ver=104"></script>
-  <script src="https://invest.buonlang.com/vendor/assets/js/script.js?ver=104"></script>
   <?php $this->registerCsrfMetaTags() ?>
   <!-- Site Title  -->
   <title><?= Html::encode($this->title) ?></title>
@@ -52,13 +45,6 @@ use common\widgets\Alert;
 							            <tr style="display: table-row;vertical-align: inherit;border-color: inherit;">
 							              <td class="text-center pdt-2-5x pdl-2x pdr-2x" style="padding-top: 25px;padding-right: 20px;padding-left: 20px;text-align: center!important;">
                               <p class="email-copyright-text" style="font-size: 13px;">Copyright © 2018 Tokenwiz. <br> Template Made By <a href="https://themeforest.net/user/softnio/portfolio">Softnio</a> &amp; Handcrafted by iO.</p>
-							                <ul class="email-social" style="padding: 0px;margin: 0px;">
-							                  <li style="display: inline-block;padding: 4px;list-style: none;"><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-b.png" alt="brand"></a></li>
-							                  <li style="display: inline-block;padding: 4px;list-style: none;"><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-e.png" alt="brand"></a></li>
-							                  <li style="display: inline-block;padding: 4px;list-style: none;"><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-d.png" alt="brand"></a></li>
-							                  <li style="display: inline-block;padding: 4px;list-style: none;"><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-a.png" alt="brand"></a></li>
-							                  <li style="display: inline-block;padding: 4px;list-style: none;"><a href="javascript:;"><img src="https://invest.buonlang.com/images/brand-c.png" alt="brand"></a></li>
-							                </ul>
 							              </td>
 							            </tr>
 							          </tbody>
