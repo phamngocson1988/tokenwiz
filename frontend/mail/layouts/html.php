@@ -44,7 +44,7 @@ use common\widgets\Alert;
 							          <tbody style="box-sizing: border-box;display: table-row-group;vertical-align: middle;border-color: inherit;">
 							            <tr style="display: table-row;vertical-align: inherit;border-color: inherit;">
 							              <td class="text-center pdt-2-5x pdl-2x pdr-2x" style="padding-top: 25px;padding-right: 20px;padding-left: 20px;text-align: center!important;">
-                              <p class="email-copyright-text" style="font-size: 13px;">Copyright © 2018 Tokenwiz. <br> Template Made By <a href="https://themeforest.net/user/softnio/portfolio">Softnio</a> &amp; Handcrafted by iO.</p>
+                              <p class="email-copyright-text" style="font-size: 13px;">Copyright 2020 &copy; <strong>Buôn Làng</strong></p>
 							              </td>
 							            </tr>
 							          </tbody>

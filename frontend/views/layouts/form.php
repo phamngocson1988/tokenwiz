@@ -37,9 +37,7 @@ AppAsset::register($this);
     	<?= $content ?>
 	    <div class="page-ath-footer">
 			  <ul class="footer-links">
-			    <li><a href="regular-page.html">Privacy Policy</a></li>
-			    <li><a href="regular-page.html">Terms</a></li>
-			    <li>&copy; 2018 TokenWiz.</li>
+			    <li>Copyright 2020 &copy; <strong>Buôn Làng</strong></li>
 			  </ul>
 			</div>
 		</div>
