@@ -9,7 +9,7 @@ use common\components\helpers\CommonHelper;
         <div class="card-head">
           <h4 class="card-title">Quản lý giao dịch</h4>
         </div>
-        <table class="data-table dt-filter-init admin-tnx">
+        <table class="data-table admin-tnx">
           <thead>
             <tr class="data-item data-head">
               <th class="data-col dt-tnxno">Mã giao dịch</th>

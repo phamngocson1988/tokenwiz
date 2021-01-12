@@ -39,7 +39,7 @@ class m201121_152657_wallet extends Migration
             'CASCADE'
         );
 
-        $this->createTable('{{%withdrawal_request}}', [
+        $this->createTable('{{%withdrawal_wallet}}', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer()->notNull(),
             'amount' => $this->integer()->notNull()->defaultValue(0),
@@ -52,8 +52,8 @@ class m201121_152657_wallet extends Migration
         ]);
 
         $this->addForeignKey(
-            'fk-withdrawal_request-user',
-            'withdrawal_request',
+            'fk-withdrawal_wallet-user',
+            'withdrawal_wallet',
             'user_id',
             'user',
             'id',
@@ -64,8 +64,8 @@ class m201121_152657_wallet extends Migration
     public function down()
     {
         $this->dropForeignKey('fk-wallet-user', 'wallet');
-        $this->dropForeignKey('fk-withdrawal_request-user', 'withdrawal_request');
+        $this->dropForeignKey('fk-withdrawal_wallet-user', 'withdrawal_wallet');
         $this->dropTable('{{%wallet}}');
-        $this->dropTable('{{%withdrawal_request}}');
+        $this->dropTable('{{%withdrawal_wallet}}');
     }
 }

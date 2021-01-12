@@ -26,6 +26,9 @@ return [
 
         'buy' => 'cart/index',
 
+        'withdrawal' => 'withdrawal/index',
+        'withdrawal/create' => 'withdrawal/create',
+
         '<controller>/<action>' => '<controller>/<action>',
     ],
 ];

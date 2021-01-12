@@ -62,9 +62,10 @@ use yii\helpers\Url;
           'options' => ['class' => 'navbar-menu'],
           'items' => [
               // Add one more record
-              ['label' => '<em class="ikon ikon-coins"></em> Đầu tư', 'url' => ['cart/index'], 'encode' => false],
+              ['label' => '<em class="ikon ikon-dashboard"></em> Đầu tư', 'url' => ['cart/index'], 'encode' => false],
               ['label' => '<em class="ikon ikon-distribution"></em> Quản lý đầu tư', 'url' => ['order/index'], 'encode' => false, 'visible' => !Yii::$app->user->isGuest],
               ['label' => '<em class="ikon ikon-transactions"></em> Giao dịch', 'url' => ['wallet/index'], 'encode' => false, 'visible' => !Yii::$app->user->isGuest],
+              ['label' => '<em class="ikon ikon-coins"></em> Rút tiền', 'url' => ['withdrawal/index'], 'encode' => false, 'visible' => !Yii::$app->user->isGuest],
             ],
           ]);
         ?>
