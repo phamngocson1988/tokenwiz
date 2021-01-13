@@ -92,9 +92,10 @@ AppAsset::register($this);
       <div class="container">
         <div class="navbar-innr">
           <ul class="navbar-menu">
-            <li><a href="<?=Url::to(['order/index']);?>"><em class="ikon ikon-distribution"></em> Quản lý đầu tư</a></li>
-            <li><a href="<?=Url::to(['wallet/index']);?>"><em class="ikon ikon-coins"></em> Quản lý giao dịch</a></li>
+            <li><a href="<?=Url::to(['order/index']);?>"><em class="ikon ikon-dashboard"></em> Quản lý đầu tư</a></li>
+            <li><a href="<?=Url::to(['wallet/index']);?>"><em class="ikon ikon-transactions"></em> Quản lý giao dịch</a></li>
             <li><a href="<?=Url::to(['user/index']);?>"><em class="ikon ikon-user"></em> Quản lý người dùng</a></li>
+            <li><a href="<?=Url::to(['withdrawal/index']);?>"><em class="ikon ikon-coins"></em> Quản lý rút tiền</a></li>
           </ul>
         </div>
         <!-- .navbar-innr -->
